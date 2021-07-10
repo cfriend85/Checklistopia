@@ -1,0 +1,38 @@
+.body{
+    background: url(https://taskntime.org/wp-content/uploads/2020/12/colorful-list-collection-with-flat-design-1080x675.jpg);
+    /* background-color: rgb(68, 65, 68); */
+    /* display: flex; */
+}
+.jumbotron{
+    display: inline-block; margin-left: 500px;
+    font-weight: 900;
+    background-color:rgb(68, 65, 68);
+    opacity: 0.90;
+    color:white;
+    margin-top: 175px;
+}
+.container{
+    display: flex;
+}
+.registration{
+    background-color: rgb(68, 65, 68,);
+    border: solid black 3px;
+    margin-right: 75px;
+    margin-bottom: 10px;
+    padding: 50px;
+}
+
+.login{
+    background-color: rgb(68, 65, 68,);
+    border: solid black 3px;
+    margin-bottom: 10px;
+    padding: 50px;
+}
+
+.label{
+    color: white
+}
+
+.sign-in{
+    margin-top: 25px;
+}
