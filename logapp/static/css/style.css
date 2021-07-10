@@ -1,7 +1,5 @@
 .body{
-    background: url(https://taskntime.org/wp-content/uploads/2020/12/colorful-list-collection-with-flat-design-1080x675.jpg);
-    /* background-color: rgb(68, 65, 68); */
-    /* display: flex; */
+    background: url(https://www.groovypost.com/wp-content/uploads/2021/02/checklist-featured.jpg) no-repeat center fixed; background-size: cover;;
 }
 .jumbotron{
     display: inline-block; margin-left: 500px;
