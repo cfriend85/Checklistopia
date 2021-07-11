@@ -68,3 +68,25 @@ def delete_item(request, items_id):
     item.delete()
 
     return redirect(f"/checklist/display/{request.session['user_id']}")
+
+# Shows form to update checklist title
+def update(request, checklist_id):
+    context = {
+        'checklist': Checklist.objects.get(id=checklist_id)
+    }
+    return render(request, 'checklist.html', context)
+
+# Process form data
+def update_checklist(request, checklist_id):
+    errors = Checklist.objects.basic_validator(request.POST)
+
+    if errors:
+        for k, v in errors.items():
+            messages.error(request, v)
+        return redirect(f"/checklist/display/edit/{checklist_id}")
+
+    checklist = Checklist.objects.get(id=checklist_id)
+    checklist.title = request.POST['title']
+    checklist.save()
+
+    return redirect(f"/checklist/display/{request.session['user_id']}")
