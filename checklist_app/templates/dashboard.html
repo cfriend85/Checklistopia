@@ -15,39 +15,36 @@
     .error{color:orange;font-weight: bolder;}
 </style>
 <body style="background: url(https://907162.smushcdn.com/2195243/wp-content/uploads/2018/07/checklists-SOPs-MSP-process-procedure-1800x1200-1400x600.jpg?lossy=0&strip=1&webp=1) no-repeat center fixed; background-size: cover;">
-    
-    <div class="container">
-        <div class="subcontain">
+<div class="container">
+    <div class="subcontain">
         <div class="jumbotron">
             <h1 class="display-3">Welcome, {{user.first_name}}!</h1>
                 <p class="lead">Create your own checklists to keep your to-do lists organized!</p>
-        </div>      
-
-    <a href="display/{{user.id}}"><button class="bg-dark" style="color: white; margin-bottom:10px;">View your Checklists</button></a><br>
-    
-    <div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
-        {% for message in messages %}
-        <p class="error">{{message}}</p>
-        {% endfor %}
-        <div class="card-header"><h4>Create a new Checklist!</h4></div>
-            <div class="card-body">
-                <form action="new" method="POST" id="form">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="formGroupExampleInput"><h5>Checklist Title</h5></label>
-                        <input type="text" class="form-control" name="title" placeholder="Title of your Checklist">
-                    </div>
-                    <input type="submit" value="Create Checklist!" class="btn btn-success" style="margin-top: 10px;">
-                </form><br>
-            <h4 class="card-title" style="text-decoration: underline;">Checklist Ideas:</h4>
-                <p class="card-text">Grocery List</p>
-                <p class="card-text">Chores</p>
-                <p class="card-text">Recipes</p>
-        </div>
-    </div><br>
-            <a class="btn btn-danger btn-lg" id="logout" href="/logout" role="button" style="margin-bottom: 10px;">Logout</a>
-        </div>
-    </div>
-    </body>
-</html>
+                    </div>      
+                        <a href="display/{{user.id}}"><button class="bg-dark" style="color: white; margin-bottom:10px;">View your Checklists</button></a><br>    
+                            <div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
+                                {% for message in messages %}
+                                    <p class="error">{{message}}</p>
+                                        {% endfor %}
+                                            <div class="card-header"><h4>Create a new Checklist!</h4></div>
+                                    <div class="card-body">
+                                <form action="new" method="POST" id="form">
+                            {% csrf_token %}
+                        <div class="form-group">
+                    <label for="formGroupExampleInput"><h5>Checklist Title</h5></label>
+                <input type="text" class="form-control" name="title" placeholder="Title of your Checklist">
+            </div>
+        <input type="submit" value="Create Checklist!" class="btn btn-success" style="margin-top: 10px;">
+    </form><br>
+<h4 class="card-title" style="text-decoration: underline;">Checklist Ideas:</h4>
+    <p class="card-text">Grocery List</p>
+        <p class="card-text">Chores</p>
+            <p class="card-text">Recipes</p>
+                </div>
+                    </div><br>
+                        <a class="btn btn-danger btn-lg" id="logout" href="/logout" role="button" style="margin-bottom: 10px;">Logout</a>
+                            </div>
+                        </div>
+                    </body>
+                </html>
 

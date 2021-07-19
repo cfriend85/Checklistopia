@@ -12,78 +12,78 @@
 <body class="body">
     <div class="jumbotron">
         <h1 class="display-3">Welcome to Checklistopia!</h1>
-        <p class="lead">A magical place where your list organization dreams come true....</p>
-    <div class="container">
-    <div class="registration">
-        {% for message in messages %} 
-        <p style="background-color: rgb(146, 0, 0);color: rgb(153, 153, 0);font-weight: 800;">{{message}}</p>
-        {% endfor %}
-        <h1 class="label">Registration</h1>
-        <form action="/users/register" method="POST">
-            {% csrf_token %}
-            <div class="form-group row">
-                <label class="label">First Name</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="first_name" placeholder="First name">
-            </div>
-            </div>
-            <div class="form-group row">
-                <label class="label">Last Name</label>
+            <p class="lead">A magical place where your list organization dreams come true....</p>
+                <div class="container">
+                    <div class="registration">
+                        {% for message in messages %} 
+                            <p style="background-color: rgb(146, 0, 0);color: rgb(153, 153, 0);font-weight: 800;">{{message}}</p>
+                                {% endfor %}
+                                    <h1 class="label">Registration</h1>
+                                        <form action="/users/register" method="POST">
+                                            {% csrf_token %}
+                                        <div class="form-group row">
+                                    <label class="label">First Name</label>
+                                <div class="col-sm-10">
+                            <input type="text" class="form-control" name="first_name" placeholder="First name">
+                        </div>
+                    </div>
+                <div class="form-group row">
+            <label class="label">Last Name</label>
+        <div class="col-sm-10">
+    <input type="text" class="form-control" name="last_name" placeholder="Last name">
+</div>
+    </div>
+        <div class="form-group row">
+            <label class="label">Email</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control" name="last_name" placeholder="Last name">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="label">Email</label>
-                <div class="col-sm-10">
-                <input type="email" class="form-control" name="email" placeholder="Email">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="label">Password</label>
-                <div class="col-sm-10">
-                <input type="password" class="form-control" name="password">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="label">Confirm Password</label>
-                <div class="col-sm-10">
-                <input type="password" class="form-control" name="confirm">
-                </div>
-            </div>
-            <div class="sign-in">
+                    <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                            </div>
+                                <div class="form-group row">
+                                    <label class="label">Password</label>
+                                <div class="col-sm-10">
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                    </div>
+                <div class="form-group row">
+            <label class="label">Confirm Password</label>
+        <div class="col-sm-10">
+    <input type="password" class="form-control" name="confirm">
+</div>
+    </div>
+        <div class="sign-in">
             <div class="col-sm-10 offset-sm-2">
                 <button type="submit" class="btn btn-warning">Register</button>
             </div>
-            </div>
-        </form>
-        </div>
-        <div class="login">
-            {% for message in messages %} 
-            <p style="background-color: rgb(146, 0, 0);color: rgb(153, 153, 0);font-weight: 800;">{{message}}</p>
-            {% endfor %}
-            <h1 class="label">Login</h1>
-            <form action="/users/login" method="POST">
-                {% csrf_token %}
+                </div>
+                    </form>
+                        </div>
+                            <div class="login">
+                                {% for message in messages %} 
+                                    <p style="background-color: rgb(146, 0, 0);color: rgb(153, 153, 0);font-weight: 800;">{{message}}</p>
+                                {% endfor %}
+                            <h1 class="label">Login</h1>
+                        <form action="/users/login" method="POST">
+                    {% csrf_token %}
                 <div class="form-group row">
-                    <label class="label">Email</label>
-                    <div class="col-sm-10">
-                    <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="label">Password</label>
-                    <div class="col-sm-10">
-                    <input type="password" class="form-control" name="password">
-                    </div>
-                </div>
-                <div class="sign-in">
-                <div class="col-sm-10 offset-sm-2">
-                    <button type="submit" class="btn btn-warning">Sign in</button>
-                </div>
-                </div>
-            </form>
-            </div>
+            <label class="label">Email</label>
+        <div class="col-sm-10">
+    <input type="email" class="form-control" name="email" placeholder="Email">
+</div>
     </div>
-</body>
+        <div class="form-group row">
+            <label class="label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password">
+                        </div>
+                            </div>
+                                <div class="sign-in">
+                                    <div class="col-sm-10 offset-sm-2">
+                                <button type="submit" class="btn btn-warning">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </body>
 </html>

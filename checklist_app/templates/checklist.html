@@ -12,28 +12,28 @@
 </style>
 </head>
 <body style="background: url(https://addicted2success.com/wp-content/uploads/2017/01/5-Reasons-Why-You-Need-to-Ditch-Your-To-Do-List-to-Be-More-Productive.png)no-repeat center fixed; background-size: cover;">
-    <div class="card text-white bg-primary mb-3 d-inline-block" id="card" style="max-width: 20rem;">
-        {% for message in messages %}
+<div class="card text-white bg-primary mb-3 d-inline-block" id="card" style="max-width: 20rem;">
+    {% for message in messages %}
         <p class="error">{{message}}</p>
-        {% endfor %}
-        <div class="card-header"><h4>Update Checklist!</h4></div>
-            <div class="card-body">
-                <form action="update_checklist/{{checklist.id}}" method="POST" id="form">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="formGroupExampleInput"><h5>Checklist Title</h5></label>
-                        <input type="text" class="form-control" name="title" placeholder="{{checklist.title}}">
-                    </div>
-                    <input type="submit" value="Update Checklist!" class="btn btn-success" style="margin-top: 10px;">
-                </form><br>
-            <h4 class="card-title" style="text-decoration: underline;">Checklist Ideas:</h4>
-                <p class="card-text">Grocery List</p>
+            {% endfor %}
+                <div class="card-header"><h4>Update Checklist!</h4></div>
+                    <div class="card-body">
+                        <form action="update_checklist/{{checklist.id}}" method="POST" id="form">
+                            {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput"><h5>Checklist Title</h5></label>
+                                        <input type="text" class="form-control" name="title" placeholder="{{checklist.title}}">
+                                    </div>
+                                <input type="submit" value="Update Checklist!" class="btn btn-success" style="margin-top: 10px;">
+                            </form><br>
+                        <h4 class="card-title" style="text-decoration: underline;">Checklist Ideas:</h4>
+                    <p class="card-text">Grocery List</p>
                 <p class="card-text">Chores</p>
-                <p class="card-text">Recipes</p>
-        </div>
-        <a href="/checklist/display/{{checklist.user.id}}" role="button" class="btn btn-success">Back to Checklists</a>
-        <a href="/checklist" role="button" class="btn btn-warning">Home</a>
+            <p class="card-text">Recipes</p>
+    </div>
+<a href="/checklist/display/{{checklist.user.id}}" role="button" class="btn btn-success">Back to Checklists</a>
+    <a href="/checklist" role="button" class="btn btn-warning">Home</a>
         <a href="/logout" role="button" class="btn btn-danger">Logout</a>
-    </div><br>
-</body>
-</html>
+            </div><br>
+                </body>
+                    </html>
