@@ -1,3 +1,3 @@
 # Checklistopia
-A python project for a site that helps Users keep track of thier to-do lists and stay origanized.
-Built with Python, Django & Bootstrap.
+
+Python/Django Checklist App styled using Bootstrap 4 with full CRUD relational database
