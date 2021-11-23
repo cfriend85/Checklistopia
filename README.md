@@ -4,4 +4,4 @@ Python/Django Checklist App styled using Bootstrap 4 with full CRUD relational d
 
 Login Splash Page
 
-<img src"https://github.com/cfriend85/Checklistopia/blob/master/demo/login_splash.gif">
+<img src"demo/login_splash.gif">
